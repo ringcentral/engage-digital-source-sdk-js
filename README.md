@@ -29,7 +29,7 @@ Forwarding                    https://xxxx.ap.ngrok.io -> localhost:6066
 # Remember the https://xxxx.ap.ngrok.io, we will use it later
 ```
 
-Follow [Step by Step guide to enable sources](docs/enable-dimelo-chat.md) to prepare the source and webhook. You could choose only one source.
+Follow [Step by step guide to enable SDK source](docs/enable-sdk-source.md) to prepare the source and webhook. You could choose only one source.
 
 ```bash
 # create env file
