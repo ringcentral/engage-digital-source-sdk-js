@@ -1,6 +1,6 @@
 # engage-digital-source-sdk-js
 
-SDK(js) to create custom source for RingCentral Engage Digital. [Wiki about RingCentral Engage Digital custom source](https://github.com/ringcentral/engage-digital-source-sdk/wiki)
+SDK(js) to create custom source for RingCentral Engage Digital. [Wiki about RingCentral Engage Digital Dimelo SDK source](https://github.com/ringcentral/engage-digital-source-sdk/wiki)
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ Forwarding                    https://xxxx.ap.ngrok.io -> localhost:6066
 # Remember the https://xxxx.ap.ngrok.io, we will use it later
 ```
 
-Follow [Step by step guide to enable SDK source](docs/enable-sdk-source.md) to prepare the source.
+Follow [Step by step guide to create Dimelo SDK source in Admin console](docs/enable-sdk-source.md) to prepare the source.
 
 ```bash
 # create env file
