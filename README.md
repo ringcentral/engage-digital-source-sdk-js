@@ -56,7 +56,7 @@ npx ringcentral-engage-source path-to-your-source-server-config.js
 
 ## Real example
 
-todo
+[https://github.com/ringcentral/engage-digital-source-server-template-js](https://github.com/ringcentral/engage-digital-source-server-template-js)
 
 ## Write a config
 
@@ -66,9 +66,14 @@ todo
 
 [docs/deploy-to-lambda.md](docs/deploy-to-lambda.md)
 
-## Init a bot/bot skill project with factory CLI tool
+## Init a source server project with factory CLI tool
 
-todo
+We have built-in CLI command to init a empty project from template: [https://github.com/ringcentral/engage-digital-source-server-template-js](https://github.com/ringcentral/engage-digital-source-server-template-js).
+
+```bash
+npm i -g ringcentral-engage-source
+ringcentral-engage-source-create my-app
+```
 
 ## License
 

@@ -9,8 +9,8 @@ const tempDir = os.tmpdir()
 
 const supportedLanguage = {
   js: {
-    zip: 'https://github.com/ringcentral/engage-digital-bot-template-js/archive/master.zip',
-    folderName: 'engage-digital-bot-template-js-master'
+    zip: 'https://github.com/ringcentral/engage-digital-source-server-template-js/archive/master.zip',
+    folderName: 'engage-digital-source-server-template-js-master'
   }
 }
 

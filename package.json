@@ -1,6 +1,6 @@
 {
   "name": "ringcentral-engage-source",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "SDK(js) to create Dimelo SDK source for RingCentral Engage Digital",
   "main": "dist/index.js",
   "bin": {
