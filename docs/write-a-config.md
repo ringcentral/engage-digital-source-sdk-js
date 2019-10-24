@@ -1,16 +1,23 @@
-/**
- * default handler
- */
+# Write SDK source server config file
 
-// handle all events
+Check [demo-config.js](../example-configs/demo-config.js) as example.
+
+```js
+
+/**
+ * handle all request
+ * @param {object} body, request body
+ * @param {object} req, express request
+ */
 exports.onRequest = async (body, req) => {
   console.log('body:', body)
-  const { action, param } = body
-  console.log('param', param)
+  const { action, params } = body
+  console.log('param', params)
+  let result
   // check https://github.com/ringcentral/engage-digital-source-sdk/wiki for more info
   switch (action) {
     case 'implementation.info':
-      return {
+      result = {
         objects:
         {
           messages: ['create', 'show', 'list'],
@@ -19,23 +26,27 @@ exports.onRequest = async (body, req) => {
         },
         options: []
       }
+      break
 
     case 'threads.list':
     case 'private_messages.list':
     case 'messages.list':
-      return []
-
+      result = []
+      break
     case 'threads.show':
     case 'private_messages.show':
     case 'messages.show':
-      return ''
-
+      result = ''
+      break
     default:
-      return {}
+      result = {}
   }
+  return result
 }
 
-// extends express app as you need
+// extends or override express app as you need
 exports.appExtend = (app) => {
   // app.get('/some-route', (req, res) => res.end('some'))
 }
+
+```

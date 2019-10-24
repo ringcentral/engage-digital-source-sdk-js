@@ -29,7 +29,7 @@ Forwarding                    https://xxxx.ap.ngrok.io -> localhost:6066
 # Remember the https://xxxx.ap.ngrok.io, we will use it later
 ```
 
-Follow [Step by step guide to enable SDK source](docs/enable-sdk-source.md) to prepare the source and webhook. You could choose only one source.
+Follow [Step by step guide to enable SDK source](docs/enable-sdk-source.md) to prepare the source.
 
 ```bash
 # create env file
@@ -42,7 +42,7 @@ npm start
 
 ### Test source server
 
-Save your source, your server will get request.
+Save your source, your server will get request, you check the request log from console.
 
 ## Use it as CLI tool
 
@@ -52,7 +52,7 @@ npx ringcentral-engage-source path-to-your-source-server-config.js
 
 ## Use is as a module
 
-todo
+[docs/direct-use.md](docs/direct-use.md)
 
 ## Real example
 
@@ -60,11 +60,11 @@ todo
 
 ## Write a config
 
-todo
+[docs/write-a-config.md](docs/write-a-config.md)
 
 ## Build and Deploy to AWS Lambda
 
-todo
+[docs/deploy-to-lambda.md](docs/deploy-to-lambda.md)
 
 ## Init a bot/bot skill project with factory CLI tool
 
@@ -73,5 +73,3 @@ todo
 ## License
 
 MIT
-
-
