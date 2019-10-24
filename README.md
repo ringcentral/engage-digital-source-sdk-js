@@ -2,8 +2,6 @@
 
 SDK(js) to create custom source for RingCentral Engage Digital. [Wiki about RingCentral Engage Digital custom source](https://github.com/ringcentral/engage-digital-source-sdk/wiki)
 
-
-
 ## Prerequisites
 
 - Nodejs 8.10+/npm, recommend using [nvm](https://github.com/creationix/nvm) to install nodejs/npm.
