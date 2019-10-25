@@ -1,6 +1,6 @@
 # engage-digital-source-sdk-js
 
-SDK(js) to create custom source for RingCentral Engage Digital. [Wiki about RingCentral Engage Digital Dimelo SDK source](https://github.com/ringcentral/engage-digital-source-sdk/wiki)
+Framework to create `Dimelo SDK source` for RingCentral Engage Digital. [Wiki about RingCentral Engage Digital Dimelo SDK source](https://github.com/ringcentral/engage-digital-source-sdk/wiki)
 
 ## Prerequisites
 
