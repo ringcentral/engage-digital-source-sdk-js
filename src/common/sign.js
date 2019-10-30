@@ -15,9 +15,9 @@ export const sign = (
   return hash.digest('hex')
 }
 
-export const verify = (body, signature) => {
+export const verify = (body, signature, secret) => {
   if (process.env.NO_SIGN_CHECK) {
     return true
   }
-  return sign(body) === signature
+  return sign(body, secret) === signature
 }
