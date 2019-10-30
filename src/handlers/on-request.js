@@ -11,8 +11,16 @@ const validObjects = [
 ]
 
 const validActions = [
-  'create', 'list', 'show'
-]
+  'create',
+  'list',
+  'show',
+  'delete',
+  'publish',
+  'show',
+  'unpublish',
+  'reply',
+  ...(process.env.CUSTOM_ACTIONS || '').split(',')
+].filter(d => d)
 
 // from https://github.com/ringcentral-tutorials/engage-digital-source-sdk-demo/blob/master/dimelo.js
 function parseAction (str) {
