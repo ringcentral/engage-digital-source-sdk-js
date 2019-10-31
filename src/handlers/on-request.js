@@ -66,12 +66,12 @@ function isValidBody (body) {
     validObjects.includes(actionHash.object)
 }
 
-function sigValid (req) {
+function sigValid (req, res) {
   return 'x-smccsdk-signature' in req.headers &&
     verify(
       JSON.stringify(req.body),
       req.headers['x-smccsdk-signature'],
-      req.locals.secret
+      res.locals.secret
     )
 }
 
@@ -84,11 +84,11 @@ export default (config) => {
         .send({ error: 'Invalid action' })
     }
     res.setHeader('Content-Type', 'application/json')
-    if (sigValid(req)) {
+    if (sigValid(req, res)) {
       const response = await config.onRequest(body, req)
       res.setHeader(
         'X-SMCCSDK-SIGNATURE',
-        sign(response, req.locals.secret)
+        sign(response, res.locals.secret)
       )
       return res.send(response)
     } else {
