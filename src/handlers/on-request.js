@@ -67,7 +67,12 @@ function isValidBody (body) {
 }
 
 function sigValid (req) {
-  return 'x-smccsdk-signature' in req.headers && verify(JSON.stringify(req.body), req.headers['x-smccsdk-signature'])
+  return 'x-smccsdk-signature' in req.headers &&
+    verify(
+      JSON.stringify(req.body),
+      req.headers['x-smccsdk-signature'],
+      req.locals.secret
+    )
 }
 
 export default (config) => {
@@ -83,7 +88,7 @@ export default (config) => {
       const response = await config.onRequest(body, req)
       res.setHeader(
         'X-SMCCSDK-SIGNATURE',
-        sign(response)
+        sign(response, req.locals.secret)
       )
       return res.send(response)
     } else {
