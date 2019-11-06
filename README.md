@@ -56,7 +56,7 @@ npx ringcentral-engage-source path-to-your-source-server-config.js
 
 ## Real example
 
-[https://github.com/ringcentral/engage-digital-source-server-template-js](https://github.com/ringcentral/engage-digital-source-server-template-js)
+Glip SDK source app: [https://github.com/ringcentral/engage-digital-sdk-source-glip](https://github.com/ringcentral/engage-digital-sdk-source-glip)
 
 ## Write a config
 
