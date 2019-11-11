@@ -20,6 +20,11 @@ function wait (time) {
 jest.setTimeout(99999)
 
 describe(pack.name, function () {
+  test('signc', () => {
+    let s = sign(JSON.stringify(undefined), 'ss')
+    console.log(s)
+    expect(1).toEqual(98 - 97)
+  })
   test('implementation.info', async () => {
     await wait(500)
     let b1 = {

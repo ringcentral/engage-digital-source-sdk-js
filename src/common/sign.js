@@ -9,6 +9,9 @@ export const sign = (
   _str = '',
   secret = process.env.RINGCENTRAL_ENGAGE_DIGITAL_API_TOKEN
 ) => {
+  if (!secret) {
+    throw new Error('secret required')
+  }
   const str = _.isString(_str) ? _str : JSON.stringify(_str)
   const hash = crypto.createHmac('sha512', secret)
   hash.update(str)
