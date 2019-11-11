@@ -46,6 +46,3 @@ exports.onRequest = async (body, req) => {
 exports.appExtend = (app) => {
   // app.get('/some-route', (req, res) => res.end('some'))
 }
-
-// If you want use your own route, could enable it
-// exports.NO_ROUTE = true
