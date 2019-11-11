@@ -16,7 +16,9 @@ app.use(bodyParser.json())
 app.get('/test', (req, res) => res.send('server running'))
 
 export const initApp = (conf) => {
-  app.post(SERVER_HOME, initWebhook(conf))
+  if (!conf.NO_ROUTE) {
+    app.post(SERVER_HOME, initWebhook(conf))
+  }
   if (conf.appExtend) {
     conf.appExtend(app)
   }
