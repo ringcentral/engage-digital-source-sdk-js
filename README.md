@@ -1,6 +1,6 @@
 # engage-digital-source-sdk-js
 
-[![Build Status](https://travis-ci.org/ringcentral/engage-digital-source-sdk-js.svg?branch=release)](https://travis-ci.org/ringcentral/engage-digital-source-sdk-js)
+[![Build Status](https://travis-ci.com/ringcentral/engage-digital-source-sdk-js.svg?branch=release)](https://travis-ci.com/ringcentral/engage-digital-source-sdk-js)
 
 Framework to create `Dimelo SDK source` for RingCentral Engage Digital. [Wiki about RingCentral Engage Digital Dimelo SDK source](https://github.com/ringcentral/engage-digital-source-sdk/wiki)
 
