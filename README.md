@@ -1,4 +1,4 @@
-# engage-digital-source-sdk-js
+# Engage Digital JavaScript Source SDK
 
 [![Build Status](https://travis-ci.org/ringcentral/engage-digital-source-sdk-js.svg?branch=release)](https://travis-ci.org/ringcentral/engage-digital-source-sdk-js)
 
