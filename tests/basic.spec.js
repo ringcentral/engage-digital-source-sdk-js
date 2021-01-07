@@ -35,7 +35,7 @@ describe(pack.name, function () {
         'X-SMCCSDK-SIGNATURE': sign(b1)
       }
     }
-    let url1 = `http://localhost:6066`
+    let url1 = `http://127.0.0.1:6066`
     let res1 = await axios.post(url1, b1, conf).then(r => r.data)
     expect('objects' in res1).toEqual(true)
   })
@@ -50,7 +50,7 @@ describe(pack.name, function () {
         'X-SMCCSDK-SIGNATURE': sign(b1)
       }
     }
-    let url1 = `http://localhost:6066`
+    let url1 = `http://127.0.0.1:6066`
     let res1 = await axios.post(url1, b1, conf).then(r => r.data)
     expect(_.isArray(res1)).toEqual(true)
   })
@@ -65,7 +65,7 @@ describe(pack.name, function () {
         'X-SMCCSDK-SIGNATURE': sign(b1)
       }
     }
-    let url1 = `http://localhost:6066`
+    let url1 = `http://127.0.0.1:6066`
     let res1 = await axios.post(url1, b1, conf).then(r => r.data)
     expect(res1 === '').toEqual(true)
   })
