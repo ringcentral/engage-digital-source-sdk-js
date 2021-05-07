@@ -1,6 +1,6 @@
 {
   "name": "ringcentral-engage-source",
-  "version": "0.1.10",
+  "version": "0.2.0",
   "description": "Framework to create `Dimelo SDK source` for RingCentral Engage Digital",
   "main": "dist/index.js",
   "bin": {
@@ -32,7 +32,7 @@
     "watch": "cd deploy && ../node_modules/.bin/sls logs -f app -t",
     "lint": "./node_modules/.bin/standard",
     "jest": "./node_modules/.bin/jest",
-    "test": "./node_modules/.bin/run-s dev jest"
+    "test": "npm run jest"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -49,7 +49,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.4.4",
-    "axios": "^0.19.0",
+    "axios": "*",
     "body-parser": "1.19.0",
     "commander": "^2.20.0",
     "dotenv": "6.2.0",

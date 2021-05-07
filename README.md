@@ -54,42 +54,35 @@ npx ringcentral-engage-source path-to-your-source-server-config.js
 
 [docs/direct-use.md](docs/direct-use.md)
 
-## Sign method
+## Post message to channel
 
-We also provide sign method to create request signature
+You can get channel realtime url and api token from channel setting page
 
 ```js
-import { sign } from 'ringcentral-engage-source/dist/common/sign'
+import { postMessage } from 'ringcentral-engage-source'
 
-// handle post added event
-export const onPostAdd = async ({
-  text, // original text
-  isTalkToSelf, // post message to self with message start with '#me'
-  textFiltered, // text without metion user
-  group,
-  user,
-  message
-}) => {
-  console.log('recieve msg', message)
-  if (user.secret && user.endpoint) {
-    const [ event ] = await formatMessage(user, [message.body])
-    const data = {
-      action: 'messages.create',
-      params: {
-        actions: ['show', 'reply'],
-        ..._.pick(event, ['id', 'thread_id', 'body', 'author'])
+const endpoint = CHANNEL_REALTIME_ENDPOINT
+const secret = CHENNEL_API_TOKEN
+
+function createMsg () {
+  const msg = {
+    action: 'messages.create',
+    params: {
+      actions: ['show', 'reply'],
+      id: '222',
+      body: 'hi there~',
+      thread_id: '34232',
+      author: {
+        id: 'uuuu',
+        firstname: 'John',
+        lastname: 'Doe',
+        screenname: 'John Doe',
+        created_at: new Date()
       }
     }
-    console.log('message create:', data)
-    const sig = sign(data, user.secret)
-    await axios.post(user.endpoint, data, {
-      headers: {
-        'X-SMCCSDK-SIGNATURE': sig,
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-    }).catch(e => console.log(e))
   }
+  const result = await postMessage(msg, endpoint, secret)
+  console.log(result.data)
 }
 ```
 
