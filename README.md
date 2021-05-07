@@ -2,12 +2,12 @@
 
 [![Build Status](https://travis-ci.com/ringcentral/engage-digital-source-sdk-js.svg?branch=release)](https://travis-ci.com/ringcentral/engage-digital-source-sdk-js)
 
-Framework to create `Dimelo SDK source` for RingCentral Engage Digital. [Wiki about RingCentral Engage Digital Dimelo SDK source](https://github.com/ringcentral/engage-digital-source-sdk/wiki)
+Framework to create `Engage Digital channel SDK` channel for RingCentral Engage Digital. [Wiki about RingCentral Engage Digital channel SDK channel](https://github.com/ringcentral/engage-digital-source-sdk/wiki)
 
 ## Prerequisites
 
 - Nodejs 8.10+/npm, recommend using [nvm](https://github.com/creationix/nvm) to install nodejs/npm.
-- RingCentral Engage(Dimelo) account, [request a demo](http://site.dimelo.com/en/demo#schedule-demo).
+- RingCentral Engage(Dimelo) account, [request a demo](https://www.ringcentral.com/digital-customer-engagement.html).
 
 ## Quick start
 
@@ -56,7 +56,7 @@ npx ringcentral-engage-source path-to-your-source-server-config.js
 
 ## Post message to channel
 
-You can get channel realtime url and api token from channel setting page
+You can get channel realtime url and api token from channel setting page, post new message to the channel.
 
 ```js
 import { postMessage } from 'ringcentral-engage-source'
