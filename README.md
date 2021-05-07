@@ -58,7 +58,7 @@ npx ringcentral-engage-source path-to-your-source-server-config.js
 
 We also provide sign method to create request signature
 
-```
+```js
 import { sign } from 'ringcentral-engage-source/dist/common/sign'
 
 // handle post added event
