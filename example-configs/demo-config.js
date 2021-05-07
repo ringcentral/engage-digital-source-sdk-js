@@ -44,5 +44,6 @@ exports.onRequest = async (body, req) => {
 
 // extends or override express app as you need
 exports.appExtend = (app) => {
+  app.get('/ff', (req, res) => res.send('ff'))
   // app.get('/some-route', (req, res) => res.end('some'))
 }

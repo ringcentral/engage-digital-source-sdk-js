@@ -54,6 +54,45 @@ npx ringcentral-engage-source path-to-your-source-server-config.js
 
 [docs/direct-use.md](docs/direct-use.md)
 
+## Sign method
+
+We also provide sign method to create request signature
+
+```
+import { sign } from 'ringcentral-engage-source/dist/common/sign'
+
+// handle post added event
+export const onPostAdd = async ({
+  text, // original text
+  isTalkToSelf, // post message to self with message start with '#me'
+  textFiltered, // text without metion user
+  group,
+  user,
+  message
+}) => {
+  console.log('recieve msg', message)
+  if (user.secret && user.endpoint) {
+    const [ event ] = await formatMessage(user, [message.body])
+    const data = {
+      action: 'messages.create',
+      params: {
+        actions: ['show', 'reply'],
+        ..._.pick(event, ['id', 'thread_id', 'body', 'author'])
+      }
+    }
+    console.log('message create:', data)
+    const sig = sign(data, user.secret)
+    await axios.post(user.endpoint, data, {
+      headers: {
+        'X-SMCCSDK-SIGNATURE': sig,
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    }).catch(e => console.log(e))
+  }
+}
+```
+
 ## Real example
 
 - Glip SDK source app: [https://github.com/ringcentral/engage-digital-sdk-source-glip](https://github.com/ringcentral/engage-digital-sdk-source-glip)
